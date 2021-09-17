@@ -11,19 +11,27 @@ https://github.com/c4pt000/Aqua-Term/blob/master/java8-switch-on-ubuntu
 requires java8 for cordova to build apk, java11 to sign see create-apk-sign.sh file 
 ## Setup
 ```bash
-$ npm install -g cordova randomstring
+$ npm install -g cordova randomstring ionic cordova-res
+$ npm install -g cordova-res --unsafe-perm=true --allow-root
 
 
-# change myApp to 'your app name'
-cordova create myApp org.apache.cordova.myApp myApp
-# cd to 'your app name'
-cordova platform add android
-cordova platform add ios
-cordova plugin add cordova-plugin-inappbrowser
+ionic start
+
+"choose project name"
+"choose angular"
+"choose blank"
+
+cd to "project name"
+
+ionic cordova platform add android
+ionic cordova plugin add cordova-plugin-inappbrowser
+
+(optional) ionic cordova platform add ios
 
 rm -rf www/
 wget https://github.com/c4pt000/appify-android-ios-cordova-builder/releases/download/www/www.cordova.tar.gz
 tar -xvf www.cordova.tar.gz
+rm -rf www.cordova.tar.gz
 nano www/index.html 
 
 change the following url in www/index.html
@@ -32,13 +40,30 @@ change the following url in www/index.html
  
  to https://your-website-to-appify.com
  
- 
+  ionic cordova resources android --force
+  
+  ionic cordova build --prod
+  ```
+    
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <br>
+  
  # build
 where /home/Android/Sdk is the path to your android/android-sdk command line tools
 export ANDROID_SDK_ROOT=/home/Android/Sdk
 
 java8-switch-on 
-cordova build android --verbose
+ionic cordova build android --verbose
 
 or on macOS only with Xcode
     cordova build ios --verbose

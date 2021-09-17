@@ -55,6 +55,13 @@ change the following url in www/index.html
   <br>
   ```
   switch to JAVA 11 for apk signing
+  
+  # sign built apk
+java11-switch-on
+
+# sign app-debug.apk to a signed apk for publishing
+sh create-keystore-and-sign.sh
+```
   <br>
   <br>
   <br>
@@ -66,24 +73,16 @@ change the following url in www/index.html
   <br>
   
  
+ 
+ # other notes / notices about PATH and building environment
 where /home/Android/Sdk is the path to your android/android-sdk command line tools
 export ANDROID_SDK_ROOT=/home/Android/Sdk
 
+* macOS only requires ** Xcode
 
 
-# macOS only requires ** Xcode
 
-# sign built apk
-java11-switch-on
 
-# sign app-debug.apk to a signed apk for publishing
-sh create-keystore-and-sign.sh
-```
-```
-$ cordova run ios 
-or
-$ cordova run android
-```
   * Watch your app come to life!
 
 

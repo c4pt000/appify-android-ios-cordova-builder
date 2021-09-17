@@ -42,7 +42,7 @@ change the following url in www/index.html
  
  to https://your-website-to-appify.com
  
- cd ../../
+ cd ../../..
  
   ionic cordova resources android --force
   

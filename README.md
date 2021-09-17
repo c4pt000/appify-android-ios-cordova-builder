@@ -14,6 +14,7 @@ requires java8 for cordova to build apk, java11 to sign see create-apk-sign.sh f
 $ npm install -g cordova randomstring ionic cordova-res
 $ npm install -g cordova-res --unsafe-perm=true --allow-root
 
+start this entire process using JAVA 8
 
 ionic start
 
@@ -52,6 +53,8 @@ change the following url in www/index.html
   <br>
   <br>
   <br>
+  ```
+  switch to JAVA 11 for apk signing
   <br>
   <br>
   <br>
@@ -66,11 +69,9 @@ change the following url in www/index.html
 where /home/Android/Sdk is the path to your android/android-sdk command line tools
 export ANDROID_SDK_ROOT=/home/Android/Sdk
 
-java8-switch-on 
-ionic cordova build android --verbose
 
-or on macOS only with Xcode
-    cordova build ios --verbose
+
+# macOS only requires ** Xcode
 
 # sign built apk
 java11-switch-on

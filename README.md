@@ -130,8 +130,8 @@ avdmanager --verbose create avd --force --name Nexus-29-x86_64  --package "syste
 /usr/bin/EMULATOR
 ```
 # gpu pipeline acceleration
-# /opt/android/android-sdk/emulator/emulator @Nexus-29-x86_64 -no-boot-anim -netdelay none -no-snapshot -wipe-data -skin 768x1280 -gpu on &
-/opt/android/android-sdk/emulator/emulator @Nexus-29-x86_64 -no-boot-anim -netdelay none -no-snapshot -wipe-data -skin 768x1280 &
+# /opt/android/android-sdk/emulator/emulator @Nexus-29-x86_64 -no-boot-anim -netdelay none -no-snapshot -wipe-data -skin 400x750 -gpu on &
+/opt/android/android-sdk/emulator/emulator @Nexus-29-x86_64 -no-boot-anim -netdelay none -no-snapshot -wipe-data -skin 400x750 &
 
 ```
 

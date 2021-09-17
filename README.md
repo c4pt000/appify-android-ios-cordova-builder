@@ -18,6 +18,7 @@ $ npm install -g cordova randomstring
 cordova create myApp org.apache.cordova.myApp myApp
 # cd to 'your app name'
 cordova platform add android
+cordova platform add ios
 cordova plugin add cordova-plugin-inappbrowser
 
 rm -rf www/

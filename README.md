@@ -26,7 +26,7 @@ wget https://github.com/c4pt000/appify-android-ios-cordova-builder/releases/down
 tar -xvf www.cordova.tar.gz
 nano www/index.html 
 
-change the following in www/index.html
+change the following url in www/index.html
  
  var WEBSITE_URL = 'https://exbitron.com';
  

@@ -56,5 +56,48 @@ $ cordova run android
   * Watch your app come to life!
 
 
+for emulator building etc examples
+
+
+
+
+
+
+notes for myself a gist I forked for android emulator 
+https://gist.github.com/c4pt000/b0a362b83823e3a89ad8aaddcbdcbfe7
+
+```
+where /opt/android/android-sdk is path to CLI android-sdk
+ export PATH=$PATH:/opt/android/android-sdk/tools/bin
+
+ export ANDROID_SDK_ROOT=/opt/android/android-sdk
+ export ANDROID_HOME=/opt/android/android-sdk
+
+sdkmanager --sdk_root=${ANDROID_HOME} --install "platforms;android-29"
+sdkmanager --sdk_root=${ANDROID_HOME} --install "system-images;android-29;google_apis_playstore;x86_64"
+```
+x86_64 emulator 29+ for experimentation with arm apk support via adb install *apk
+```
+#/root/.bashrc alias
+alias EMULATOR='emulator @Nexus-29-x86_64 -no-boot-anim -netdelay none -no-snapshot -wipe-data -skin 768x1280 &'
+
+sdkmanager --install "system-images;android-29;google_apis_playstore;x86_64"
+
+#support for arm with the x86 emulator with version 29+ and higher?
+avdmanager --verbose create avd --force --name Nexus-29-x86_64  --package "system-images;android-29;google_apis_playstore;x86_64" 
+```
+
+>> /root/.bashrc
+```
+alias EMULATOR='emulator @Nexus-29-x86_64 -no-boot-anim -netdelay none -no-snapshot -wipe-data -skin 768x1280 &'
+```
+or alternatively
+/usr/bin/EMULATOR
+```
+# gpu pipeline acceleration
+# /opt/android/android-sdk/emulator/emulator @Nexus-29-x86_64 -gpu on &
+/opt/android/android-sdk/emulator/emulator @Nexus-29-x86_64 &
+
+```
 
 

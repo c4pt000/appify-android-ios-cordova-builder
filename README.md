@@ -1,6 +1,11 @@
 # Appify
 Turn any website into a native app in seconds! For use with npm and cordova.
 
+* for ubuntu/debian based java8 and java11 fast switching bash scripts
+
+https://github.com/c4pt000/Aqua-Term/blob/master/java11-switch-on-ubuntu
+https://github.com/c4pt000/Aqua-Term/blob/master/java8-switch-on-ubuntu
+
 ##Demo with iPad
 ![Demo](Demo.gif)
 requires java8 for cordova to build apk, java11 to sign see create-apk-sign.sh file 

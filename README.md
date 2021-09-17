@@ -29,6 +29,8 @@ ionic cordova plugin add cordova-plugin-inappbrowser
 
 (optional) ionic cordova platform add ios
 cd platforms/android
+nano app/src/main/res/xml/config.xml (line 30 name of app)
+nano nano app/src/main/res/values/strings.xml (line 3 name of app)
 cd platform_www
 wget https://github.com/c4pt000/appify-android-ios-cordova-builder/releases/download/www/www.cordova.tar.gz
 tar -xvf www.cordova.tar.gz

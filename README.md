@@ -108,27 +108,21 @@ where /opt/android/android-sdk is path to CLI android-sdk
 sdkmanager --sdk_root=${ANDROID_HOME} --install "platforms;android-29"
 sdkmanager --sdk_root=${ANDROID_HOME} --install "system-images;android-29;google_apis_playstore;x86_64"
 ```
-x86_64 emulator 29+ for experimentation with arm apk support via adb install *apk
+x86_64 emulator 
 ```
-#/root/.bashrc alias
-alias EMULATOR='emulator @Nexus-29-x86_64 -no-boot-anim -netdelay none -no-snapshot -wipe-data -skin 768x1280 &'
+
 
 sdkmanager --install "system-images;android-29;google_apis_playstore;x86_64"
 
-#support for arm with the x86 emulator with version 29+ and higher?
 avdmanager --verbose create avd --force --name Nexus-29-x86_64  --package "system-images;android-29;google_apis_playstore;x86_64" 
 ```
 
->> /root/.bashrc
-```
-alias EMULATOR='emulator @Nexus-29-x86_64 -no-boot-anim -netdelay none -no-snapshot -wipe-data -skin 768x1280 &'
-```
-or alternatively
+
 /usr/bin/EMULATOR
 ```
 # gpu pipeline acceleration
-# /opt/android/android-sdk/emulator/emulator @Nexus-29-x86_64 -gpu on &
-/opt/android/android-sdk/emulator/emulator @Nexus-29-x86_64 &
+# /opt/android/android-sdk/emulator/emulator @Nexus-29-x86_64 -no-boot-anim -netdelay none -no-snapshot -wipe-data -skin 768x1280 -gpu on &
+/opt/android/android-sdk/emulator/emulator @Nexus-29-x86_64 -no-boot-anim -netdelay none -no-snapshot -wipe-data -skin 768x1280 &
 
 ```
 

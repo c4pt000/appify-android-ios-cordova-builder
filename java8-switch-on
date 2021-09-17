@@ -1,8 +1,0 @@
-#!/bin/bash
-#yum install java-1.8.0-openjdk java-1.8.0-openjdk-devel
-rm -rf /etc/alternatives/javac
-rm -rf /etc/alternatives/java
-ln -s /usr/lib/jvm/java-1.8.0/bin/java /etc/alternatives/java
-ln -s /usr/lib/jvm/java-1.8.0/bin/javac /etc/alternatives/javac 
-java -version
-javac -version

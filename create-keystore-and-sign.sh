@@ -1,4 +1,4 @@
-echo "requires running java11 from ionic + cordova project folder root where platforms is in ls -l"
+echo "requires running java11 from cordova project folder root where platforms is in ls -l"
 echo ' 
 yum install nodejs -y
 npm -g install randomstring'

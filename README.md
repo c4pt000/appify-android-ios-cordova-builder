@@ -27,12 +27,13 @@ ionic cordova platform add android
 ionic cordova plugin add cordova-plugin-inappbrowser
 
 (optional) ionic cordova platform add ios
-
-rm -rf www/
+cd platforms/android
+rm -rf platform_www
 wget https://github.com/c4pt000/appify-android-ios-cordova-builder/releases/download/www/www.cordova.tar.gz
 tar -xvf www.cordova.tar.gz
+mv www platform_www
 rm -rf www.cordova.tar.gz
-nano www/index.html 
+nano platform_www/index.html 
 
 change the following url in www/index.html
  

@@ -56,7 +56,7 @@ $ cordova run android
   * Watch your app come to life!
 
 
-for emulator building etc examples
+# for emulator building etc examples
 
 
 

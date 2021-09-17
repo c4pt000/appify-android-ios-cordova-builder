@@ -56,7 +56,6 @@ change the following url in www/index.html
   <br>
   <br>
   ```
-  switch to JAVA 11 for apk signing
   
   # sign built apk
 java11-switch-on

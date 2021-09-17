@@ -32,6 +32,13 @@ where /home/Android/Sdk is the path to your android/android-sdk command line too
 export ANDROID_SDK_ROOT=/home/Android/Sdk
 
 java8-switch-on 
+cordova build android --verbose
+
+or on macOS only with Xcode
+    cordova build ios --verbose
+
+
+java11-switch-on
 
 sh create-sign.sh
 ```

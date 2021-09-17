@@ -17,9 +17,14 @@ cordova plugin add cordova-plugin-inappbrowser
 rm -rf www/
 
 wget here
+ 
  nano www/index.html 
- change WEB_SITEURL
-  
+ change   the following
+ 
+ var WEBSITE_URL = 'https://exbitron.com';
+ 
+ to https://your-website-to-appify.com
+ 
 where /home/Android/Sdk is the path to your android/android-sdk command line tools
 export ANDROID_SDK_ROOT=/home/Android/Sdk
 java8-switch-on 

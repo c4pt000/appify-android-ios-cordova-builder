@@ -63,6 +63,16 @@ java11-switch-on
 
 # sign app-debug.apk to a signed apk for publishing
 sh create-keystore-and-sign.sh
+
+ls -l
+
+run the /usr/bin/EMULATOR below
+
+adb install website-app-Android-signed.apk
+
+optional (for debugging)
+adb shell
+adb logcat
 ```
   <br>
   <br>
@@ -86,7 +96,6 @@ export ANDROID_SDK_ROOT=/home/Android/Sdk
 
 
   * Watch your app come to life!
-
 
 # for emulator building etc examples
 

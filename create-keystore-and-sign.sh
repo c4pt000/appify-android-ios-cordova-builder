@@ -2,7 +2,13 @@ echo "requires running java11 from cordova project folder root where platforms i
 echo ' 
 yum install nodejs -y
 npm -g install randomstring'
+java11-switch-on
+echo""
+echo""
+echo""
 randomstring
+echo ""
+echo "backup your app signing password whether you use this random string provided or not!"
 rm -rf my-release-key.jks
 keytool -genkey -v -keystore my-release-key.jks -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
 cp -rf ./platforms/android/app/build/outputs/apk/debug/app-debug.apk .

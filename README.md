@@ -28,18 +28,21 @@ ionic cordova plugin add cordova-plugin-inappbrowser
 
 (optional) ionic cordova platform add ios
 cd platforms/android
-rm -rf platform_www
+cd platform_www
 wget https://github.com/c4pt000/appify-android-ios-cordova-builder/releases/download/www/www.cordova.tar.gz
 tar -xvf www.cordova.tar.gz
-mv www platform_www
+mv www/* .
 rm -rf www.cordova.tar.gz
-nano platform_www/index.html 
+rm -rf www
+nano index.html 
 
 change the following url in www/index.html
  
  var WEBSITE_URL = 'https://exbitron.com';
  
  to https://your-website-to-appify.com
+ 
+ cd ../../
  
   ionic cordova resources android --force
   

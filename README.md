@@ -37,15 +37,13 @@ cordova build android --verbose
 or on macOS only with Xcode
     cordova build ios --verbose
 
-
+# sign built apk
 java11-switch-on
 
-sh create-sign.sh
+# sign app-debug.apk to a signed apk for publishing
+sh create-keystore-and-sign.sh
 ```
-## How to Use
-  * Change variable  `WEBSITE_URL` to a URL of your choice.
-  * Run application with the following command:
-```bash
+```
 $ cordova run ios 
 or
 $ cordova run android

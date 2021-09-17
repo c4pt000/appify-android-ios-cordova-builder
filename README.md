@@ -58,7 +58,7 @@ change the following url in www/index.html
 
   <br>
   
- # build
+ 
 where /home/Android/Sdk is the path to your android/android-sdk command line tools
 export ANDROID_SDK_ROOT=/home/Android/Sdk
 

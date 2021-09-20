@@ -3,7 +3,7 @@
 
 https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-not-permitted
 
-for regular HTTP (non-https sites) in config.xml 
+for regular HTTP (non-https sites) in config.xml (OR AVOID encapsulating an http site altogether)
 
 ```
 replace "<application> tag"

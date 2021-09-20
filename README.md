@@ -1,4 +1,9 @@
 # Appify
+
+for regular HTTP (non-https sites) in config.xml replace "<application> tag"
+```
+      <application android:usesCleartextTraffic="true" />
+      ```
 Turn any website into a native app in seconds! For use with npm and cordova.
 
 ##Demo with iPad

@@ -1,5 +1,5 @@
 # Appify
-
+# gradle 6.5 only
 
 https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-not-permitted
 

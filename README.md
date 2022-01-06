@@ -1,5 +1,7 @@
 # WIP currently has naming convention issues with automatic scripts and not manual editing of the source (when building more than one package, changing the site, changing the logo with this project)
 
+
+# based directly on Apache Cordova project to bottle html and JavaScript code to a mobile ready solution
  # Android (macOS see below)
 
 # requires java8 (modify java dx.jar as build-app.sh mentions to avoid conflicts when building apk)

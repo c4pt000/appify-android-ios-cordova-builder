@@ -20,6 +20,13 @@ nvm alias default 14.18
 node -v
 ```
 
+
+# MACOS (required when Xcode opens from build-macOS.sh script)
+![s1](https://raw.githubusercontent.com/c4pt000/appify-android-ios-cordova-builder/master/unique-name-and-bundle-id.png)
+![s1](https://raw.githubusercontent.com/c4pt000/appify-android-ios-cordova-builder/master/ios-target-much-greater-than-ios7.png)
+![s1](https://raw.githubusercontent.com/c4pt000/appify-android-ios-cordova-builder/master/correcting-apple-bundle-id-sign.png)
+![s1](https://raw.githubusercontent.com/c4pt000/appify-android-ios-cordova-builder/master/change-target-deployment-target.png)
+
 # Appify
 # gradle 7.1 only
 

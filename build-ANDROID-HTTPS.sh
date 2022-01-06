@@ -21,3 +21,6 @@ sleep 10s
 npm install
 export GRADLE_OPTS="-Dorg.gradle.parallel=true -Dorg.gradle.workers.max=8 -Dorg.gradle.daemon=true -Dorg.gradle.configureondemand=true"
 cordova build android --verbose
+cp -rf /opt/appify-android-ios-cordova-builder/platforms/android/app/build/outputs/apk/debug/app-debug.apk .
+echo "your app is installable as app-debug.apk"
+

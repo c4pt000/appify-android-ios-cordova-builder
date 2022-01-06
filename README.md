@@ -45,6 +45,23 @@ replace "<application> tag"
       <application android:usesCleartextTraffic="true" />
       
 ```
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+original author readme notes below
+<br>
+<br>
+<br>
+
 Turn any website into a native app in seconds! For use with npm and cordova.
 
 ##Demo with iPad

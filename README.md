@@ -52,6 +52,9 @@ platforms/android/app/src/main/AndroidManifest.xml
 ```
 # choose one of these two options below in AndroidManifest.xml depending on the site in var WEBSITE_URL = index.html (http or https)
 
+#     <!-- without the android:usesCleartextTraffic="true" setting to allow only HTTP the application CAN ONLY FUNCTION AS HTTPS -->
+
+
 HTTP only (cleartext=true set here)
 ```
  <!-- for http sites NON https -->

@@ -1,3 +1,22 @@
+# edit config.xml
+# edit package.json (first two lines for package name)
+# modify ic_launcher_custom/logo.png with gimp
+# npm install
+# logo-adjust.sh
+# build-app.sh
+# cp -rf /opt/appify-android-ios-cordova-builder/platforms/android/app/build/outputs/apk/debug/app-debug.apk /home/<user_name>/Desktop/your-app-name.apk
+
+# recommended node 14.18
+
+
+```
+ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+nvm install 14.18
+nvm use 14.18
+nvm alias default 14.18
+node -v
+```
+
 # Appify
 # gradle 7.1 only
 

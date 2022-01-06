@@ -17,7 +17,7 @@
        under the License.
  */
 
-package org.apache.radioblockchain.info;
+package org.apache.cordova.hellocordova;
 
 import android.os.Bundle;
 import org.apache.cordova.*;

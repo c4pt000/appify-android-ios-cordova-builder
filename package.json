@@ -1,5 +1,5 @@
 {
-  "name": "org.apache.radioblockchain",
+  "name": "org.apache.cordova.hellocordova",
   "displayName": "radioblockchain",
   "version": "1.0.0",
   "description": "A sample Apache Cordova application that responds to the deviceready event.",

@@ -47,8 +47,12 @@ https://raw.githubusercontent.com/c4pt000/appify-android-ios-cordova-builder/mas
 ```
 platforms/android/app/src/main/AndroidManifest.xml
 
+
+ 
 ```
-and either select the comment for non https *TO USE* HTTP
+# choose one of these two options below in AndroidManifest.xml depending on the site in var WEBSITE_URL = index.html (http or https)
+
+HTTP only (cleartext=true set here)
 ```
  <!-- for http sites NON https -->
        <application android:usesCleartextTraffic="true" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:supportsRtl="true">  
@@ -59,8 +63,7 @@ and either select the comment for non https *TO USE* HTTP
 
 ```
 
-or use standard https without the cleartext modification
-
+HTTPS only
 ```
  <!-- for http sites NON https -->
     <!--     <application android:usesCleartextTraffic="true" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:supportsRtl="true">  -->

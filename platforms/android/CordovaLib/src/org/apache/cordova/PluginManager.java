@@ -18,7 +18,6 @@
  */
 package org.apache.cordova;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedHashMap;
@@ -41,12 +40,6 @@ import android.os.Build;
  */
 public class PluginManager {
     private static String TAG = "PluginManager";
-
-    // @todo same as ConfigXmlParser. Research centralizing ideas, maybe create CordovaConstants
-    private static String SCHEME_HTTPS = "https";
-    // @todo same as ConfigXmlParser. Research centralizing ideas, maybe create CordovaConstants
-    private static String DEFAULT_HOSTNAME = "localhost";
-
     private static final int SLOW_EXEC_WARNING_THRESHOLD = Debug.isDebuggerConnected() ? 60 : 16;
 
     // List of service entries
@@ -373,24 +366,6 @@ public class PluginManager {
     }
 
     /**
-     * @todo should we move this somewhere public and accessible by all plugins?
-     * For now, it is placed where it is used and kept private so we can decide later and move without causing a breaking change.
-     * An ideal location might be in the "ConfigXmlParser" at the time it generates the "launchUrl".
-     *
-     * @todo should we be restrictive on the "file://" return? e.g. "file:///android_asset/www/"
-     * Would be considered as a breaking change if we apply a more granular check.
-     */
-    private String getLaunchUrlPrefix() {
-        if (!app.getPreferences().getBoolean("AndroidInsecureFileModeEnabled", false)) {
-            String scheme = app.getPreferences().getString("scheme", SCHEME_HTTPS).toLowerCase();
-            String hostname = app.getPreferences().getString("hostname", DEFAULT_HOSTNAME);
-            return scheme + "://" + hostname + '/';
-        }
-
-        return "file://";
-    }
-
-    /**
      * Called when the webview is going to request an external resource.
      *
      * This delegates to the installed plugins, and returns true/false for the
@@ -455,7 +430,7 @@ public class PluginManager {
         }
 
         // Default policy:
-        return url.startsWith(getLaunchUrlPrefix()) || url.startsWith("about:blank");
+        return url.startsWith("file://") || url.startsWith("about:blank");
     }
 
 
@@ -476,7 +451,7 @@ public class PluginManager {
         }
 
         // Default policy:
-        return url.startsWith(getLaunchUrlPrefix());
+        return url.startsWith("file://");
     }
 
     /**
@@ -601,20 +576,5 @@ public class PluginManager {
             }
         }
         return state;
-    }
-
-    /**
-     * Collect all plugins PathHandlers
-     *
-     * @return list of PathHandlers in no particular order
-     */
-    public ArrayList<CordovaPluginPathHandler> getPluginPathHandlers() {
-        ArrayList<CordovaPluginPathHandler> handlers = new ArrayList<CordovaPluginPathHandler>();
-        for (CordovaPlugin plugin : this.pluginMap.values()) {
-            if (plugin != null && plugin.getPathHandler() != null) {
-                handlers.add(plugin.getPathHandler());
-            }
-        }
-        return handlers;
     }
 }

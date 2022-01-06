@@ -17,6 +17,7 @@
 */
 
 ext.repos = {
-    google()
     mavenCentral()
+    google()
+    jcenter()
 }

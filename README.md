@@ -5,8 +5,10 @@
 # npm install
 # sh logo-adjust.sh
 # sh build-app.sh
-# cp -rf /opt/appify-android-ios-cordova-builder/platforms/android/app/build/outputs/apk/debug/app-debug.apk /home/<user_name>/Desktop/your-app-name.apk
 
+```
+cp -rf /opt/appify-android-ios-cordova-builder/platforms/android/app/build/outputs/apk/debug/app-debug.apk /home/<user_name>/Desktop/your-app-name.apk
+```
 # recommended node 14.18
 
 

@@ -36,16 +36,38 @@ node -v
 # Android requires this cleartext flag when using http sites that are non https enabled in the index.html to load with the app 
 # ios is not effected by this 
 
+if the site in www/index.html is either https:// or http://
+
 https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-not-permitted
 
 for regular HTTP (non-https sites) in config.xml (OR AVOID encapsulating an http site altogether)
 
-```
-replace "<application> tag"
+edit this file
+https://raw.githubusercontent.com/c4pt000/appify-android-ios-cordova-builder/master/platforms/android/app/src/main/AndroidManifest.xm
 ```
 
+
 ```
-      <application android:usesCleartextTraffic="true" />
+and either select the comment for non https *TO USE* HTTP
+```
+ <!-- for http sites NON https -->
+       <application android:usesCleartextTraffic="true" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:supportsRtl="true">  
+<!-- or else use the following for HTTPS only -->
+    <!-- <application android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:supportsRtl="true"> -->
+    
+      
+
+```
+
+or use standard https without the cleartext modification
+
+```
+ <!-- for http sites NON https -->
+    <!--     <application android:usesCleartextTraffic="true" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:supportsRtl="true">  -->
+
+<!-- or else use the following for HTTPS only -->
+    <application android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:supportsRtl="true">
+       
       
 ```
 

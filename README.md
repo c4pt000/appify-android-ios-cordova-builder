@@ -30,6 +30,24 @@ node -v
 ![s1](https://raw.githubusercontent.com/c4pt000/appify-android-ios-cordova-builder/master/correcting-apple-bundle-id-sign.png)
 ![s1](https://raw.githubusercontent.com/c4pt000/appify-android-ios-cordova-builder/master/change-target-deployment-target.png)
 
+# android package naming convention
+```
+nano --> config.xml
+
+replace android-packageName=" org.apache.cordova.radioblockchain "
+
+
+<widget id="io.cordova.hellocordova"  android-packageName="org.apache.cordova.radioblockchain" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<name>radioblockchain.info</name>
+
+
+nano --> package.json
+
+  "name": "org.apache.cordova.radioblockchain",
+  "displayName": "radioblockchain",
+
+```
+
 
 
 # Android specific https or http in the index.html (clear-text functions for regular http and non-https)
@@ -112,7 +130,6 @@ $ git clone https://github.com/samkho10/appify.git <app-name>
 $ cordova run ios
 ```
   * Watch your app come to life!
-
 
 
 

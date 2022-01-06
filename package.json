@@ -1,6 +1,6 @@
 {
-  "name": "org.apache.cordova.radiopool.p2pool",
-  "displayName": "radiopool-p2pool",
+  "name": "org.apache.cordova.radioblockchain",
+  "displayName": "radioblockchain",
   "version": "1.0.0",
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
   "main": "index.js",

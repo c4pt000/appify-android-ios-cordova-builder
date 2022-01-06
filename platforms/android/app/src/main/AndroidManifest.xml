@@ -7,15 +7,15 @@
     <!-- without the android:usesCleartextTraffic="true" setting to allow only HTTP the application CAN ONLY FUNCTION AS HTTPS -->
     
     <!-- for http sites NON https when using http:// in index.html -->
-    <!--     
+        
     
     <application android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:usesCleartextTraffic="true" android:label="@string/app_name" android:supportsRtl="true"> 
  
-    -->
+    
 
     <!-- comment out and uncomment line above for HTTP or use HTTPS as default............... standard HTTPS below only when using https:// in index.html -->
     
-    <application android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:supportsRtl="true">
+   <!--  <application android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:supportsRtl="true"> -->
     
         
         

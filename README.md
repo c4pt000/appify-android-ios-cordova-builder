@@ -30,17 +30,17 @@ node -v
 ![s1](https://raw.githubusercontent.com/c4pt000/appify-android-ios-cordova-builder/master/correcting-apple-bundle-id-sign.png)
 ![s1](https://raw.githubusercontent.com/c4pt000/appify-android-ios-cordova-builder/master/change-target-deployment-target.png)
 
-# Appify
-# gradle 7.1 only
 
+
+# Android specific https or http in the index.html (clear-text functions for regular http and non-https)
 # Android requires this cleartext flag when using http sites that are non https enabled in the index.html to load with the app 
-# ios is not effected by this 
+# ios is not effected by this setting at all
 
 if the site in www/index.html is either https:// or http://
 
-https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-not-permitted
+reference https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-not-permitted
 
-for regular HTTP (non-https sites) in config.xml (OR AVOID encapsulating an http site altogether)
+for regular HTTP (non-https sites) in AndroidManifest.xml (OR AVOID encapsulating an http site altogether)
 
 edit this file
 https://raw.githubusercontent.com/c4pt000/appify-android-ios-cordova-builder/master/platforms/android/app/src/main/AndroidManifest.xml
@@ -50,9 +50,10 @@ platforms/android/app/src/main/AndroidManifest.xml
 
  
 ```
-# choose one of these two options below in AndroidManifest.xml depending on the site in var WEBSITE_URL = index.html (http or https)
 
-#     <!-- without the android:usesCleartextTraffic="true" setting to allow only HTTP the application CAN ONLY FUNCTION AS HTTPS -->
+# choose one of these two options below in AndroidManifest.xml depending on the site in var WEBSITE_URL = index.html (http or https)
+#      choose without the android:usesCleartextTraffic="true" setting to allow HTTPS 
+#      choose with  the android:useCleartextTraffic="true" to allow HTTP
 
 
 HTTP only (cleartext=true set here)

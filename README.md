@@ -33,6 +33,9 @@ node -v
 # Appify
 # gradle 7.1 only
 
+# Android requires this cleartext flag when using http sites that are non https enabled in the index.html to load with the app 
+# ios is not effected by this 
+
 https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-not-permitted
 
 for regular HTTP (non-https sites) in config.xml (OR AVOID encapsulating an http site altogether)

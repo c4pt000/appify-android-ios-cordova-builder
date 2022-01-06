@@ -1,9 +1,10 @@
-# edit config.xml
+# requires java8 (modify java dx.jar as build-app.sh mentions to avoid conflicts when building apk)
+# edit config.xml (package name)
 # edit package.json (first two lines for package name)
 # modify ic_launcher_custom/logo.png with gimp
 # npm install
-# logo-adjust.sh
-# build-app.sh
+# sh logo-adjust.sh
+# sh build-app.sh
 # cp -rf /opt/appify-android-ios-cordova-builder/platforms/android/app/build/outputs/apk/debug/app-debug.apk /home/<user_name>/Desktop/your-app-name.apk
 
 # recommended node 14.18

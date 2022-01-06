@@ -43,9 +43,9 @@ https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-no
 for regular HTTP (non-https sites) in config.xml (OR AVOID encapsulating an http site altogether)
 
 edit this file
-https://raw.githubusercontent.com/c4pt000/appify-android-ios-cordova-builder/master/platforms/android/app/src/main/AndroidManifest.xm
+https://raw.githubusercontent.com/c4pt000/appify-android-ios-cordova-builder/master/platforms/android/app/src/main/AndroidManifest.xml
 ```
-
+platforms/android/app/src/main/AndroidManifest.xml
 
 ```
 and either select the comment for non https *TO USE* HTTP

@@ -1,3 +1,6 @@
+
+* as a utility to deploy to ios or android from a local/remote http or https site
+
 # WIP currently has naming convention issues with automatic scripts and not manual editing of the source (when building more than one package, changing the site, changing the logo with this project)
 
 
